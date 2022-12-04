@@ -32,10 +32,10 @@ The customer can stay on this page or can click on the Return to Home buttonto g
   
 # 3. Baker Walkthrough
 
-##3.1 Baker Portal
+## 3.1 Baker Portal
 In the Baker portal of The Bakery, a baker can view any order that have been submitted by customers. Each order will have the last name and first name of the customer, the order date, the item quantity,FORGOT I WANTED TO ADD PICK UP DATE TO THIS, and a button for more info.
 
-##3.2 Order Details
+## 3.2 Order Details
 Once the baker clicks the more info button on an order, the baker is taken to the next page where details of the order are listed such as pick up date, the list of items and the quantity of the items. The baker here can also update the status of the order which will alert the customer that the order is in progress or completed.
     
  DID WE WANT TO GIVE CUSTOMERS THE ABILITY FOR NOTES TO BAKER????
