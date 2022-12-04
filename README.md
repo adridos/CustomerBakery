@@ -1,5 +1,7 @@
 User Manual
 
+This user manual will walkthrough The Bakery's website which will be used by both customers and bakers of The Bakery. 
+
 # 1. Log In
   Upon entering The Bakery's website, the user is taken to a login page. The user will enter their email address and password in order to access their account.
   There are two paths, the Customer login and the Baker's login. The customer's login will take customers to the bakery's website where the customer can view the menu and order ahead of time.
@@ -30,8 +32,12 @@ The customer can stay on this page or can click on the Return to Home buttonto g
   
 # 3. Baker Walkthrough
 
-##3.1
+##3.1 Baker Portal
 In the Baker portal of The Bakery, a baker can view any order that have been submitted by customers. Each order will have the last name and first name of the customer, the order date, the item quantity,FORGOT I WANTED TO ADD PICK UP DATE TO THIS, and a button for more info.
+
+##3.2 Order Details
+Once the baker clicks the more info button on an order, the baker is taken to the next page where details of the order are listed such as pick up date, the list of items and the quantity of the items. The baker here can also update the status of the order which will alert the customer that the order is in progress or completed.
     
+ DID WE WANT TO GIVE CUSTOMERS THE ABILITY FOR NOTES TO BAKER????
 </ol>
 
