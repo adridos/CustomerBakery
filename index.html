@@ -205,27 +205,7 @@
                 </div>
         </div>
         </section>
-        <div><?php
-            $servername = "localhost"
-            $username = "user1"
-            $password = "Cheese1996!"
-            $dbname = "bakerydb"
-
-            $conn = newmysql($servername, $username, $password, $dbname);
-            if ($conn -> connect_error)  {
-                die("connection failed: " .$connect-error);
-            }  
-
-            //check to see if email and password exist before allowing login
-            $select_query = "SELECT * FROM CUSTOMER";
-            $result = $conn->query($select_query);
-
-            if($result->num_rows > 0){
-                while($row = $result->fetch_assoc()){
-                    echo $row['CUST_FNAME'].''.$row['CUST_LNAME'].'</br>';
-                }
-            }
-            ?></div>
+        
     </main>
 </body>
 

@@ -25,8 +25,8 @@
             padding-left: 10px;
             padding-top: 10px;
             overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
+            overflow-y: hidden;
+            white-space: nowrap;
         }
 
         h1 {
@@ -104,6 +104,7 @@
             border-radius: 10px;
             padding: 10px;
             text-decoration: none;
+            margin-left: 350px;
         }
 
         .itemHeaders {
@@ -112,17 +113,6 @@
             justify-content: space-around;
             align-items: center;
             padding: 20px;
-        }
-
-        .bottom {
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-            padding-bottom: 20px;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            align-content: center;
         }
 
         .closebtn {
@@ -142,187 +132,237 @@
         <div class="scrolling">
             <div class="itemContainer">
                 <h1>Cakes</h1>
+                <div id="fade" class="black_overlay"></div>
+
                 <a href="javascript:void(0)"
-                    onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+                    onclick="document.getElementById('light1').style.display='block';document.getElementById('fade').style.display='block'">
                     <img class="item" src="assets/images/cake1.jpg"></a>
-                <div id="light" class="white_content">
+                <div id="light1" class="white_content">
                     <div class="itemHeaders">
-                        <p>Item Name:</p>
-                        <p>Item Description:</p>
+                        <p>Item Name: Double Chocolate Cake</p>
+                        <p>Item Description: Amazing Chocolate Cake</p>
+                        <p>Item Price:$9.99 </p>
                         <p>Item Quantity: </p>
-                        <input type="text" id="quantity" name="quantity">
                     </div>
-                    <div class="bottom">
-                        <button class="addbtn">add to cart</button>
-                        <a class="close" href="javascript:void(0)"
-                            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><button
-                                class="closebtn">Close</button></a>
+                    <form action="ReadOrder" method="post">
+                        <input type="text" id="quantity1" name="quantity">
+                        <button class="addbtn" type="submit" name="cake1">add to cart</button>
+                    </form>
+                    <a class="close" href="javascript:void(0)"
+                        onclick="document.getElementById('light1').style.display='none';document.getElementById('fade').style.display='none'">
+                        <button class="closebtn">Close</button></a>
+                </div>
+
+                <a href="javascript:void(0)"
+                    onclick="document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block'">
+                    <img class="item" src="assets/images/cake2.jpg"></a>
+                <div id="light2" class="white_content">
+                    <div class="itemHeaders">
+                        <p>Item Name: Fancy Pink Cake</p>
+                        <p>Item Description: Pink cake with fancy icing</p>
+                        <p>Item Price: $19.99 </p>
+                        <p>Item Quantity: </p>
                     </div>
+                    <form action="ReadOrder" method="post">
+
+                        <input type="text" id="quantity2" name="quantity">
+
+                        <button class="addbtn" type="submit" name="cake2">add to cart</button>
+                    </form>
+
+                    <a class="close" href="javascript:void(0)"
+                        onclick="document.getElementById('light2').style.display='none';document.getElementById('fade').style.display='none'"><button
+                            class="closebtn">Close</button></a>
+                </div>
+
+                <a href="javascript:void(0)"
+                    onclick="document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block'">
+                    <img class="item" src="assets/images/cake3.jpg"></a>
+                <div id="light3" class="white_content">
+                    <div class="itemHeaders">
+                        <p>Item Name: Upside Down Icecream Cone Cake</p>
+                        <p>Item Description: Icecream cone inspired cake</p>
+                        <p>Item Price: $12.99</p>
+                        <p>Item Quantity: </p>
+                    </div>
+
+                    <form action="ReadOrder" method="post">
+
+                        <input type="text" id="quantity3" name="quantity">
+                        <button class="addbtn" type="submit" name="cake3">add to cart</button>
+                    </form>
+
+                    <a class="close" href="javascript:void(0)"
+                        onclick="document.getElementById('light3').style.display='none';document.getElementById('fade').style.display='none'"><button
+                            class="closebtn">Close</button></a>
                 </div>
                 <div id="fade" class="black_overlay"></div>
+
                 <a href="javascript:void(0)"
-                    onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'"><img
-                        <img class="item" src="assets/images/cake2.jpg">
-                    <div id="light" class="white_content">
-                        <div class="itemHeaders">
-                            <p>Item Name:</p>
-                            <p>Item Description:</p>
-                            <p>Item Quantity: </p>
-                            <input type="text" id="quantity" name="quantity">
-                        </div>
-                        <div class="bottom">
-                            <button class="addbtn">add to cart</button>
-                            <a class="close" href="javascript:void(0)"
-                                onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><button
-                                    class="closebtn">Close</button></a>
-                        </div>
+                    onclick="document.getElementById('light4').style.display='block';document.getElementById('fade').style.display='block'">
+                    <img class="item" src="assets/images/cake4.jpg"></a>
+                <div id="light4" class="white_content">
+                    <div class="itemHeaders">
+                        <p>Item Name: Lemon Chocolate Cake</p>
+                        <p>Item Description: A delicious lemon cake with hrd chocolate topping</p>
+                        <p>Item Price: $12.99 </p>
+                        <p>Item Quantity: </p>
                     </div>
 
-                    <a href="javascript:void(0)"
-                        onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
-                        <img class="item" src="assets/images/cake3.jpg">
-                        <div id="light" class="white_content">
-                            <div class="itemHeaders">
-                                <p>Item Name:</p>
-                                <p>Item Description:</p>
-                                <p>Item Quantity: </p>
-                                <input type="text" id="quantity" name="quantity">
-                            </div>
-                            <div class="bottom">
-                                <button class="addbtn">add to cart</button>
-                                <a class="close" href="javascript:void(0)"
-                                    onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><button
-                                        class="closebtn">Close</button></a>
-                            </div>
-                        </div>
+                    <form action="ReadOrder" method="post">
 
-                        <a href="javascript:void(0)"
-                            onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
-                            <img class="item" src="assets/images/cake4.jpg">
-                            <div id="light" class="white_content">
-                                <div class="itemHeaders">
-                                    <p>Item Name:</p>
-                                    <p>Item Description:</p>
-                                    <p>Item Quantity: </p>
-                                    <input type="text" id="quantity" name="quantity">
-                                </div>
-                                <div class="bottom">
-                                    <button class="addbtn">add to cart</button>
-                                    <a class="close" href="javascript:void(0)"
-                                        onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><button
-                                            class="closebtn">Close</button></a>
-                                </div>
-                            </div>
+                        <input type="text" id="quantity4" name="quantity">
+                        <button class="addbtn" type="submit" name="cake4">add to cart</button>
+                    </form>
 
-                            <a href="javascript:void(0)"
-                                onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+                    <a class="close" href="javascript:void(0)"
+                        onclick="document.getElementById('light4').style.display='none';document.getElementById('fade').style.display='none'"><button
+                            class="closebtn">Close</button></a>
+                </div>
 
-                                <img class="item" src="assets/images/cake5.jpg">
-                                <div id="light" class="white_content">
-                                    <div class="itemHeaders">
-                                        <p>Item Name:</p>
-                                        <p>Item Description:</p>
-                                        <p>Item Quantity: </p>
-                                        <input type="text" id="quantity" name="quantity">
-                                    </div>
-                                    <div class="bottom">
-                                        <button class="addbtn">add to cart</button>
-                                        <a class="close" href="javascript:void(0)"
-                                            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><button
-                                                class="closebtn">Close</button></a>
-                                    </div>
-                                </div>
+                <a href="javascript:void(0)"
+                    onclick="document.getElementById('light5').style.display='block';document.getElementById('fade').style.display='block'">
+
+                    <img class="item" src="assets/images/cake5.jpg"></a>
+                <div id="light5" class="white_content">
+                    <div class="itemHeaders">
+                        <p>Item Name: Chocolate Fudge Cake</p>
+                        <p>Item Description: a nice thick chocolate cake even chocolatier than the double chocolate
+                            cake.</p>
+                        <p>Item Price: $19.99</p>
+                        <p>Item Quantity: </p>
+                    </div>
+
+                    <form action="ReadOrder" method="post">
+
+                        <input type="text" id="quantity5" name="quantity">
+
+                        <button class="addbtn" type="submit" name="cake5">add to cart</button>
+                    </form>
+
+                    <a class="close" href="javascript:void(0)"
+                        onclick="document.getElementById('light5').style.display='none';document.getElementById('fade').style.display='none'"><button
+                            class="closebtn">Close</button></a>
+                </div>
             </div>
+
             <div class="itemContainer">
                 <h1>Cupcakes</h1>
                 <a href="javascript:void(0)"
-                onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
-                <img class="item" src="assets/images/cupcake1.jpg">
-                <div id="light" class="white_content">
+                    onclick="document.getElementById('light6').style.display='block';document.getElementById('fade').style.display='block'">
+                    <img class="item" src="assets/images/cupcake1.jpg"></a>
+                <div id="light6" class="white_content">
                     <div class="itemHeaders">
-                        <p>Item Name:</p>
-                        <p>Item Description:</p>
+                        <p>Item Name:Ferrero Rocher Cupcake</p>
+                        <p>Item Description: Everything you love about Ferrero Rocher in a cupcake!</p>
+                        <p>Item Price: $3.99</p>
                         <p>Item Quantity: </p>
-                        <input type="text" id="quantity" name="quantity">
                     </div>
-                    <div class="bottom">
-                        <button class="addbtn">add to cart</button>
-                        <a class="close" href="javascript:void(0)"
-                            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><button
-                                class="closebtn">Close</button></a>
-                    </div>
+
+                    <form action="ReadOrder" method="post">
+
+                        <input type="text" id="quantity6" name="quantity">
+
+                        <button class="addbtn" type="submit" name="cake6">add to cart</button>
+                    </form>
+
+                    <a class="close" href="javascript:void(0)"
+                        onclick="document.getElementById('light6').style.display='none';document.getElementById('fade').style.display='none'"><button
+                            class="closebtn">Close</button></a>
                 </div>
 
                 <a href="javascript:void(0)"
-                onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
-                <img class="item" src="assets/images/cupcake2.jpg">
-                <div id="light" class="white_content">
+                    onclick="document.getElementById('light7').style.display='block';document.getElementById('fade').style.display='block'">
+                    <img class="item" src="assets/images/cupcake2.jpg"></a>
+                <div id="light7" class="white_content">
                     <div class="itemHeaders">
-                        <p>Item Name:</p>
-                        <p>Item Description:</p>
+                        <p>Item Name: Oreo Cupcake</p>
+                        <p>Item Description: A perfectly interpretation of a double stuffed Oreo.</p>
+                        <p>Item Price:$2.99 </p>
                         <p>Item Quantity: </p>
-                        <input type="text" id="quantity" name="quantity">
                     </div>
-                    <div class="bottom">
-                        <button class="addbtn">add to cart</button>
-                        <a class="close" href="javascript:void(0)"
-                            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><button
-                                class="closebtn">Close</button></a>
-                    </div>
+
+                    <form action="ReadOrder" method="post">
+
+                        <input type="text" id="quantity7" name="quantity">
+
+                        <button class="addbtn" type="submit" name="cake7">add to cart</button>
+                    </form>
+
+                    <a class="close" href="javascript:void(0)"
+                        onclick="document.getElementById('light7').style.display='none';document.getElementById('fade').style.display='none'"><button
+                            class="closebtn">Close</button></a>
                 </div>
 
                 <a href="javascript:void(0)"
-                onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
-                <img class="item" src="assets/images/cupcake3.jpg">
-                <div id="light" class="white_content">
+                    onclick="document.getElementById('light8').style.display='block';document.getElementById('fade').style.display='block'">
+                    <img class="item" src="assets/images/cupcake3.jpg"></a>
+                <div id="light8" class="white_content">
                     <div class="itemHeaders">
-                        <p>Item Name:</p>
-                        <p>Item Description:</p>
+                        <p>Item Name: Carmel Stroopwafel Cupcake</p>
+                        <p>Item Description: A cupcake inspired by the Ducth wafflecookie with spicel carmel syrup inthe
+                            middle</p>
+                        <p>Item Price: $3.99 </p>
                         <p>Item Quantity: </p>
-                        <input type="text" id="quantity" name="quantity">
                     </div>
-                    <div class="bottom">
-                        <button class="addbtn">add to cart</button>
-                        <a class="close" href="javascript:void(0)"
-                            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><button
-                                class="closebtn">Close</button></a>
-                    </div>
+
+                    <form action="ReadOrder" method="post">
+
+                        <input type="text" id="quantity8" name="quantity">
+
+                        <button class="addbtn" type="submit" name="cake8">add to cart</button>
+                    </form>
+
+                    <a class="close" href="javascript:void(0)"
+                        onclick="document.getElementById('light8').style.display='none';document.getElementById('fade').style.display='none'"><button
+                            class="closebtn">Close</button></a>
                 </div>
 
                 <a href="javascript:void(0)"
-                onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
-                <img class="item" src="assets/images/cupcake4.jpg">
-                <div id="light" class="white_content">
+                    onclick="document.getElementById('light9').style.display='block';document.getElementById('fade').style.display='block'">
+                    <img class="item" src="assets/images/cupcake4.jpg"></a>
+                <div id="light9" class="white_content">
                     <div class="itemHeaders">
-                        <p>Item Name:</p>
-                        <p>Item Description:</p>
+                        <p>Item Name: Red Velvet Cupcake</p>
+                        <p>Item Description: The classic red velvet cupcake. Can anyone really describe the taste of red
+                            velvet?</p>
+                        <p>Item Price: $1.99 </p>
                         <p>Item Quantity: </p>
-                        <input type="text" id="quantity" name="quantity">
                     </div>
-                    <div class="bottom">
-                        <button class="addbtn">add to cart</button>
-                        <a class="close" href="javascript:void(0)"
-                            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><button
-                                class="closebtn">Close</button></a>
-                    </div>
+
+                    <form action="ReadOrder" method="post">
+
+                        <input type="text" id="quantity9" name="quantity">
+
+                        <button class="addbtn" type="submit" name="cake9">add to cart</button>
+                    </form>
+
+                    <a class="close" href="javascript:void(0)"
+                        onclick="document.getElementById('light9').style.display='none';document.getElementById('fade').style.display='none'"><button
+                            class="closebtn">Close</button></a>
                 </div>
 
                 <a href="javascript:void(0)"
-                onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
-                <img class="item" src="assets/images/cupcake5.jpg">
-                <div id="light" class="white_content">
+                    onclick="document.getElementById('light10').style.display='block';document.getElementById('fade').style.display='block'">
+                    <img class="item" src="assets/images/cupcake5.jpg"></a>
+                <div id="light10" class="white_content">
                     <div class="itemHeaders">
-                        <p>Item Name:</p>
-                        <p>Item Description:</p>
+                        <p>Item Name: Confetti Cupcake</p>
+                        <p>Item Description: The classic confetti cupcake with strawberry frosting.</p>
+                        <p>Item Price: $1.99 </p>
                         <p>Item Quantity: </p>
-                        <input type="text" id="quantity" name="quantity">
                     </div>
-                    <div class="bottom">
-                        <button class="addbtn">add to cart</button>
-                        <a class="close" href="javascript:void(0)"
-                            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><button
-                                class="closebtn">Close</button></a>
-                    </div>
+
+                    <form action="ReadOrder" method="post">
+
+                        <input type="text" id="quantity10" name="quantity">
+
+                        <button class="addbtn" type="submit" name="cake10">add to cart</button>
+                    </form>
+
+                    <a class="close" href="javascript:void(0)"
+                        onclick="document.getElementById('light10').style.display='none';document.getElementById('fade').style.display='none'"><button
+                            class="closebtn">Close</button></a>
                 </div>
             </div>
 
@@ -330,98 +370,125 @@
                 <h1>Breads</h1>
 
                 <a href="javascript:void(0)"
-                onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
-                <img class="item" src="assets/images/bread1.jpg">
-                <div id="light" class="white_content">
+                    onclick="document.getElementById('light11').style.display='block';document.getElementById('fade').style.display='block'">
+                    <img class="item" src="assets/images/bread1.jpg"></a>
+                <div id="light11" class="white_content">
                     <div class="itemHeaders">
-                        <p>Item Name:</p>
-                        <p>Item Description:</p>
+                        <p>Item Name: Everything Bagel</p>
+                        <p>Item Description: This bage is seasoned with EVERYTHING</p>
+                        <p>Item Price: $2.99 </p>
                         <p>Item Quantity: </p>
-                        <input type="text" id="quantity" name="quantity">
                     </div>
-                    <div class="bottom">
-                        <button class="addbtn">add to cart</button>
-                        <a class="close" href="javascript:void(0)"
-                            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><button
-                                class="closebtn">Close</button></a>
-                    </div>
+
+                    <form action="ReadOrder" method="post">
+
+                        <input type="text" id="quantity11" name="quantity">
+
+                        <button class="addbtn" type="submit" name="cake11">add to cart</button>
+                    </form>
+
+                    <a class="close" href="javascript:void(0)"
+                        onclick="document.getElementById('light11').style.display='none';document.getElementById('fade').style.display='none'"><button
+                            class="closebtn">Close</button></a>
                 </div>
 
                 <a href="javascript:void(0)"
-                onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
-                <img class="item" src="assets/images/bread2.jpg">
-                <div id="light" class="white_content">
+                    onclick="document.getElementById('light12').style.display='block';document.getElementById('fade').style.display='block'">
+                    <img class="item" src="assets/images/bread2.jpg"></a>
+                <div id="light12" class="white_content">
                     <div class="itemHeaders">
-                        <p>Item Name:</p>
-                        <p>Item Description:</p>
+                        <p>Item Name: Sourdough Loaf</p>
+                        <p>Item Description: A light airy bread perfect for sandwhiches or dipping in oil.</p>
+                        <p>Item Price: $5.99</p>
                         <p>Item Quantity: </p>
-                        <input type="text" id="quantity" name="quantity">
                     </div>
-                    <div class="bottom">
-                        <button class="addbtn">add to cart</button>
-                        <a class="close" href="javascript:void(0)"
-                            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><button
-                                class="closebtn">Close</button></a>
-                    </div>
+
+                    <form action="ReadOrder" method="post">
+
+                        <input type="text" id="quantity12" name="quantity">
+
+                        <button class="addbtn" type="submit" name="cake12">add to cart</button>
+                    </form>
+
+                    <a class="close" href="javascript:void(0)"
+                        onclick="document.getElementById('light12').style.display='none';document.getElementById('fade').style.display='none'"><button
+                            class="closebtn">Close</button></a>
                 </div>
 
                 <a href="javascript:void(0)"
-                onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
-                <img class="item" src="assets/images/bread3.jpg">
-                <div id="light" class="white_content">
+                    onclick="document.getElementById('light13').style.display='block';document.getElementById('fade').style.display='block'">
+                    <img class="item" src="assets/images/bread3.jpg"></a>
+                <div id="light13" class="white_content">
                     <div class="itemHeaders">
-                        <p>Item Name:</p>
-                        <p>Item Description:</p>
+                        <p>Item Name: Country Rolls</p>
+                        <p>Item Description: A soft, buttery, flaky roll perfect to pass around the table. </p>
+                        <p>Item Price: $2.99 </p>
                         <p>Item Quantity: </p>
-                        <input type="text" id="quantity" name="quantity">
                     </div>
-                    <div class="bottom">
-                        <button class="addbtn">add to cart</button>
-                        <a class="close" href="javascript:void(0)"
-                            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><button
-                                class="closebtn">Close</button></a>
-                    </div>
+
+                    <form action="ReadOrder" method="post">
+
+                        <input type="text" id="quantity13" name="quantity">
+
+                        <button class="addbtn" type="submit" name="cake13">add to cart</button>
+                    </form>
+
+                    <a class="close" href="javascript:void(0)"
+                        onclick="document.getElementById('light13').style.display='none';document.getElementById('fade').style.display='none'"><button
+                            class="closebtn">Close</button></a>
                 </div>
 
                 <a href="javascript:void(0)"
-                onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
-                <img class="item" src="assets/images/bread4.jpg">
-                <div id="light" class="white_content">
+                    onclick="document.getElementById('light14').style.display='block';document.getElementById('fade').style.display='block'">
+                    <img class="item" src="assets/images/bread4.jpg"></a>
+                <div id="light14" class="white_content">
                     <div class="itemHeaders">
-                        <p>Item Name:</p>
-                        <p>Item Description:</p>
+                        <p>Item Name: Croissant</p>
+                        <p>Item Description: The perfect buttery, flaky croissant.</p>
+                        <p>Item Price: $3.99 </p>
                         <p>Item Quantity: </p>
-                        <input type="text" id="quantity" name="quantity">
                     </div>
-                    <div class="bottom">
-                        <button class="addbtn">add to cart</button>
-                        <a class="close" href="javascript:void(0)"
-                            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><button
-                                class="closebtn">Close</button></a>
-                    </div>
+
+                    <form action="ReadOrder" method="post">
+
+                        <input type="text" id="quantity14" name="quantity">
+
+                        <button class="addbtn" type="submit" name="cake14">add to cart</button>
+                    </form>
+
+                    <a class="close" href="javascript:void(0)"
+                        onclick="document.getElementById('light14').style.display='none';document.getElementById('fade').style.display='none'"><button
+                            class="closebtn">Close</button></a>
                 </div>
                 <a href="javascript:void(0)"
-                onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
-                <img class="item" src="assets/images/bread5.jpg">
-                <div id="light" class="white_content">
+                    onclick="document.getElementById('light15').style.display='block';document.getElementById('fade').style.display='block'">
+                    <img class="item" src="assets/images/bread5.jpg"></a>
+                <div id="light15" class="white_content">
                     <div class="itemHeaders">
-                        <p>Item Name:</p>
-                        <p>Item Description:</p>
+                        <p>Item Name: Wheat Loaf</p>
+                        <p>Item Description: a yummy seeded loaf.</p>
+                        <p>Item Price: $5.99 </p>
                         <p>Item Quantity: </p>
-                        <input type="text" id="quantity" name="quantity">
                     </div>
-                    <div class="bottom">
-                        <button class="addbtn">add to cart</button>
-                        <a class="close" href="javascript:void(0)"
-                            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><button
-                                class="closebtn">Close</button></a>
-                    </div>
+
+                    <form action="ReadOrder" method="post">
+
+                        <input type="text" id="quantity15" name="quantity">
+
+                        <button class="addbtn" type="submit" name="cake15">add to cart</button>
+                    </form>
+
+                    <a class="close" href="javascript:void(0)"
+                        onclick="document.getElementById('light15').style.display='none';document.getElementById('fade').style.display='none'"><button
+                            class="closebtn">Close</button></a>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="cart">
         <h2>Items: </h2>
+
         <h2>Total: </h2>
         <a href="checkout.html"><button class="checkoutbtn">Checkout</button></a>
     </div>
