@@ -7,6 +7,9 @@ This user manual will walkthrough The Bakery's website which will be used by bot
   There are two paths, the Customer login and the Baker's login. The customer's login will take customers to the bakery's website where the customer can view the menu and order ahead of time.
   The Baker's login will take the bakers of The Bakery to view current orders and the details of that order. The Baker's can update the progess of orders which alerts customers onthe progress of their order.
   
+  ![UMOne](https://user-images.githubusercontent.com/66699146/205510428-ca9b8a17-f610-4348-ad10-f550a6edbe42.png)
+
+  
 ###For Customer's walkthrough continue to #2 For Baker's walkthrough continue to #3 
   
 # 2. Customer Walkthrough
