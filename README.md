@@ -7,7 +7,7 @@ This user manual will walkthrough The Bakery's website which will be used by bot
   There are two paths, the Customer login and the Baker's login. The customer's login will take customers to the bakery's website where the customer can view the menu and order ahead of time.
   The Baker's login will take the bakers of The Bakery to view current orders and the details of that order. The Baker's can update the progess of orders which alerts customers onthe progress of their order.
   
-  ![UMOne](https://user-images.githubusercontent.com/66699146/205510428-ca9b8a17-f610-4348-ad10-f550a6edbe42.png)
+![login](https://user-images.githubusercontent.com/66699146/205802924-3b513d0f-a2dc-46b8-8726-59ce406ad79d.png)
 
   
 ###For Customer's walkthrough continue to #2 For Baker's walkthrough continue to #3 
@@ -15,14 +15,20 @@ This user manual will walkthrough The Bakery's website which will be used by bot
 # 2. Customer Walkthrough
 
 ## 2.1 Home Page
-  Once at the home page of the customer view, the customer can checkout the about sectionto learn more about the Bakery or click on order buttonto being the order process.
+  Once at the home page of the customer view, the customer can checkout the about sectionto learn more about the Bakery or click on order button to begin the order process.
+  
+  ![order](https://user-images.githubusercontent.com/66699146/205803268-d0b1c57d-61c2-4474-93bd-1003d5da3d83.png)
+
   
   
 ## 2.2 Order
-Once the Order button is clicked, the customer can view the cakes, cupcakes, breads ad other items offered by the bakery. The customer can view more items under each header by horizontally scrolling on the images of the items. A customer can view details of the items by clicking on the photo of the desired item. A small window will overlay the page to display the item name, item description, DO WE NEED TO LIST ITEM COST??? and the quantity which the customer can change depending onthe quantity desired to add to the cart. The customer can click the add to cart button or close the window to return back to the order view with all items listed.
+Once the Order button is clicked, the customer can view the cakes, cupcakes, breads ad other items offered by the bakery. The customer can view more items under each header by horizontally scrolling on the images of the items. At the bottom of this page, the customer can view their cart summary which shows the total items in cart, the total cost, and a checkout button when the customer is ready.
 
+![menu](https://user-images.githubusercontent.com/66699146/205803998-937658fa-8c31-4cd4-bef1-1e0e53eeca11.png)
 
-At the bottom of this page, the customer can view their cart summary which shows the total items in cart, the total cost, and a checkout button when the customer is ready.
+A customer can view details of the items by clicking on the photo of the desired item. A small window will overlay the page to display the item name, item description, item cost, and the quantity which the customer can change depending onthe quantity desired to add to the cart. The customer can click the add to cart button or close the window to return back to the order view with all items listed.
+
+![menudetails](https://user-images.githubusercontent.com/66699146/205803815-6a80de37-fe0a-42ed-90e1-9ec901122d93.png)
 
 ## 2.3 Checkout 
 On the checkout page, the customer will see a summary of their order on the right and on the left is a list of customer required input. In order to proceed with the order, the customer must enter the desired pick up date, first name, last name, phone number, email and select a radio button for their pyment method: credit card, debit card or cash. Once everything in entered, the customer can continue by clicking the submit button.
@@ -36,11 +42,8 @@ The customer can stay on this page or can click on the Return to Home buttonto g
 # 3. Baker Walkthrough
 
 ## 3.1 Baker Portal
-In the Baker portal of The Bakery, a baker can view any order that have been submitted by customers. Each order will have the last name and first name of the customer, the order date, the item quantity,FORGOT I WANTED TO ADD PICK UP DATE TO THIS, and a button for more info.
+In the Baker portal of The Bakery, a baker can view any order that have been submitted by customers. Each order will have the name of the customer, the order date, the pick up date, the item quantity and other details important to the baker.
 
-## 3.2 Order Details
-Once the baker clicks the more info button on an order, the baker is taken to the next page where details of the order are listed such as pick up date, the list of items and the quantity of the items. The baker here can also update the status of the order which will alert the customer that the order is in progress or completed.
     
- DID WE WANT TO GIVE CUSTOMERS THE ABILITY FOR NOTES TO BAKER????
 </ol>
 
