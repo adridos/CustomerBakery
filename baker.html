@@ -12,21 +12,43 @@
         body {
             background-image: url("assets/images/bakeryBG.jpg");
         }
-        li{
+
+        li {
             padding: 50px;
         }
-        .infobtn{
-            padding:0;
+
+        .infobtn {
+            padding: 0;
         }
-        h1{
-            padding:0;
+
+        h1 {
+            padding: 0;
         }
-        .headers{
+
+        .headers {
             display: flex;
             width: 100%;
             justify-content: space-around;
         }
 
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 20px;
+        }
+        th{
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e9e9e9;
+        }
     </style>
 </head>
 
@@ -38,14 +60,39 @@
     </header>
     <div class="Container">
         <div class="headers">
-            <ul>
-                <li><h1>Last Name</h1></li>
-                <li><h1>First Name</h1></li>
-                <li><h1>Order Date </h1></li>
-                <li><h1>Item Quantity</h1></li>
-                <li><a href="bakerDetails.html"><button class="infobtn">more info</button></a></li>
-            </ul>
-    </div>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Order Date</th>
+                    <th>Pickup Date</th>
+                    <th>Item Quantity </th>
+                </tr>
+                <tr>
+                    <td>Name 1</td>
+                    <td>order date 1</td>
+                    <td>pick up date 1</td>
+                    <td>item quantity 1</td>
+                </tr>
+                <tr>
+                    <td>Name 2</td>
+                    <td>order date 2</td>
+                    <td>pick up date 2</td>
+                    <td>item quantity 2</td>
+                </tr>
+                <tr>
+                    <td>Name 3</td>
+                    <td>order date 3</td>
+                    <td>pick up date 3</td>
+                    <td>item quantity 3</td>
+                </tr>
+                <tr>
+                    <td>Name 4</td>
+                    <td>order date 4</td>
+                    <td>pick up date 4</td>
+                    <td>item quantity 4</td>
+                </tr>
+            </table>
+        </div>
 </body>
 
 </html>
