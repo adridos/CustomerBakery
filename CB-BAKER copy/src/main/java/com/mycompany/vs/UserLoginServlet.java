@@ -60,23 +60,27 @@ public class UserLoginServlet extends HttpServlet {
             if(user.getId() == 7)
             {
                 destPage = "Baker.jsp";
+                
+                RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
+                dispatcher.forward(request, response);
             }
-            else
-            {
+            
             destPage = "Customer.jsp";
-            }
+            
+            RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
+            dispatcher.forward(request, response);
+            
         } else {
             String message = "Invalid email/password";
             request.setAttribute("message", message);
         }
-        RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
-        dispatcher.forward(request, response);
         
         }
         catch(Exception e)
                 {
-                System.out.println("error");
+                System.out.println("\n\nerror, SOMETHING WENT WRONG");
                 e.printStackTrace();
+                    System.out.println(e);
                 }
 
     }

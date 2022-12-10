@@ -4,7 +4,13 @@
     Author     : matthew
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="com.mycompany.vs.GlobalUser"%>
+<%@page import="com.mycompany.vs.GlobalOrderCount"%>
+<%@page import="com.mycompany.vs.User"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*" %>
+
+<% Class.forName("com.mysql.jdbc.Driver"); %>
+
 <!DOCTYPE HTML>
 <html>
 
@@ -167,7 +173,7 @@
                     </div>
                     <form action="ReadOrder" method="post">
                         <input type="text" id="quantity1" name="quantity">
-                        <button class="addbtn" type="submit" name="cake1">add to cart</button>
+                        <button class="addbtn" type="submit" name="cake" value="chocolate cake">add to cart</button>
                     </form>
                     <a class="close" href="javascript:void(0)"
                         onclick="document.getElementById('light1').style.display='none';document.getElementById('fade').style.display='none'">
@@ -188,7 +194,7 @@
 
                         <input type="text" id="quantity2" name="quantity">
 
-                        <button class="addbtn" type="submit" name="cake2">add to cart</button>
+                        <button class="addbtn" type="submit" name="cake" value="pink cake">add to cart</button>
                     </form>
 
                     <a class="close" href="javascript:void(0)"
@@ -210,7 +216,7 @@
                     <form action="ReadOrder" method="post">
 
                         <input type="text" id="quantity3" name="quantity">
-                        <button class="addbtn" type="submit" name="cake3">add to cart</button>
+                        <button class="addbtn" type="submit" name="cake" value="cone cake">add to cart</button>
                     </form>
 
                     <a class="close" href="javascript:void(0)"
@@ -233,7 +239,7 @@
                     <form action="ReadOrder" method="post">
 
                         <input type="text" id="quantity4" name="quantity">
-                        <button class="addbtn" type="submit" name="cake4">add to cart</button>
+                        <button class="addbtn" type="submit" name="cake" value="lemon cake">add to cart</button>
                     </form>
 
                     <a class="close" href="javascript:void(0)"
@@ -258,7 +264,7 @@
 
                         <input type="text" id="quantity5" name="quantity">
 
-                        <button class="addbtn" type="submit" name="cake5">add to cart</button>
+                        <button class="addbtn" type="submit" name="cake" value="fudge cake">add to cart</button>
                     </form>
 
                     <a class="close" href="javascript:void(0)"
@@ -284,7 +290,7 @@
 
                         <input type="text" id="quantity6" name="quantity">
 
-                        <button class="addbtn" type="submit" name="cake6">add to cart</button>
+                        <button class="addbtn" type="submit" name="cake" value="rocher cupcake">add to cart</button>
                     </form>
 
                     <a class="close" href="javascript:void(0)"
@@ -307,7 +313,7 @@
 
                         <input type="text" id="quantity7" name="quantity">
 
-                        <button class="addbtn" type="submit" name="cake7">add to cart</button>
+                        <button class="addbtn" type="submit" name="cake" value="oreo cupcake">add to cart</button>
                     </form>
 
                     <a class="close" href="javascript:void(0)"
@@ -331,7 +337,7 @@
 
                         <input type="text" id="quantity8" name="quantity">
 
-                        <button class="addbtn" type="submit" name="cake8">add to cart</button>
+                        <button class="addbtn" type="submit" name="cake" value="carmel cupcake">add to cart</button>
                     </form>
 
                     <a class="close" href="javascript:void(0)"
@@ -355,7 +361,7 @@
 
                         <input type="text" id="quantity9" name="quantity">
 
-                        <button class="addbtn" type="submit" name="cake9">add to cart</button>
+                        <button class="addbtn" type="submit" name="cake" value="velvet cupcake">add to cart</button>
                     </form>
 
                     <a class="close" href="javascript:void(0)"
@@ -378,7 +384,7 @@
 
                         <input type="text" id="quantity10" name="quantity">
 
-                        <button class="addbtn" type="submit" name="cake10">add to cart</button>
+                        <button class="addbtn" type="submit" name="cake" value="confetti cupcake">add to cart</button>
                     </form>
 
                     <a class="close" href="javascript:void(0)"
@@ -396,7 +402,7 @@
                 <div id="light11" class="white_content">
                     <div class="itemHeaders">
                         <p>Item Name: Everything Bagel</p>
-                        <p>Item Description: This bage is seasoned with EVERYTHING</p>
+                        <p>Item Description: This bagel is seasoned with EVERYTHING</p>
                         <p>Item Price: $2.99 </p>
                         <p>Item Quantity: </p>
                     </div>
@@ -405,7 +411,7 @@
 
                         <input type="text" id="quantity11" name="quantity">
 
-                        <button class="addbtn" type="submit" name="cake11">add to cart</button>
+                        <button class="addbtn" type="submit" name="cake" value="everything bagel">add to cart</button>
                     </form>
 
                     <a class="close" href="javascript:void(0)"
@@ -419,7 +425,7 @@
                 <div id="light12" class="white_content">
                     <div class="itemHeaders">
                         <p>Item Name: Sourdough Loaf</p>
-                        <p>Item Description: A light airy bread perfect for sandwhiches or dipping in oil.</p>
+                        <p>Item Description: A light airy bread perfect for sandwiches or dipping in oil.</p>
                         <p>Item Price: $5.99</p>
                         <p>Item Quantity: </p>
                     </div>
@@ -428,7 +434,7 @@
 
                         <input type="text" id="quantity12" name="quantity">
 
-                        <button class="addbtn" type="submit" name="cake12">add to cart</button>
+                        <button class="addbtn" type="submit" name="cake" value="sour loaf">add to cart</button>
                     </form>
 
                     <a class="close" href="javascript:void(0)"
@@ -451,7 +457,7 @@
 
                         <input type="text" id="quantity13" name="quantity">
 
-                        <button class="addbtn" type="submit" name="cake13">add to cart</button>
+                        <button class="addbtn" type="submit" name="cake" value="country rolls">add to cart</button>
                     </form>
 
                     <a class="close" href="javascript:void(0)"
@@ -474,7 +480,7 @@
 
                         <input type="text" id="quantity14" name="quantity">
 
-                        <button class="addbtn" type="submit" name="cake14">add to cart</button>
+                        <button class="addbtn" type="submit" name="cake" value="croissant">add to cart</button>
                     </form>
 
                     <a class="close" href="javascript:void(0)"
@@ -496,7 +502,7 @@
 
                         <input type="text" id="quantity15" name="quantity">
 
-                        <button class="addbtn" type="submit" name="cake15">add to cart</button>
+                        <button class="addbtn" type="submit" name="cake" value="wheat loaf">add to cart</button>
                     </form>
 
                     <a class="close" href="javascript:void(0)"
@@ -508,9 +514,44 @@
     </div>
 
     <div class="cart">
-        <h2>Items: </h2>
+        
+        <%
+           String dbDriver = "com.mysql.jdbc.Driver";
+        String dbURL = "jdbc:mysql:// localhost:3306/";
+        // Database name to access
+        String dbName = "bakerydb";
+        String dbUsername = "root";
+        String dbPassword = "MySQL2022!";
+  
+        Class.forName(dbDriver);
+        Connection con = DriverManager.getConnection(dbURL + dbName,
+                                                     dbUsername, 
+                                                     dbPassword);
+           Statement statement = con.createStatement() ;
+           
+           User user = new User();
+           
+          
+           user.setOrderID(GlobalOrderCount.OrderCounter);
+           
+          // GlobalOrderCount.OrderCounter = GlobalOrderCount.OrderCounter + 1;
+           
+           int newOrderID = user.getOrderID();
+           
+           PreparedStatement preparedStatement = con.prepareStatement("SELECT ITEM_QUANTITY, PRICE_TOTAL FROM ITEMS_ORDERED WHERE ORDERS_ORDER_ID = ?");
+          
+           preparedStatement.setInt(1, newOrderID);
+           
+          ResultSet resultset = preparedStatement.executeQuery();
+       %>
+        
+        <% while (resultset.next()) { %>
+        <h2>Items: <%= resultset.getInt(1) %></h2>
 
-        <h2>Total: </h2>
+        <h2>Total: $<%= resultset.getDouble(2) %></h2>
+        
+        <% } %>
+        
         <a href="Checkout.jsp"><button class="checkoutbtn">Checkout</button></a>
     </div>
 </body>

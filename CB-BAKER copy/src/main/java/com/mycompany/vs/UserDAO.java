@@ -90,7 +90,8 @@ public User checkLogin(String email, String password) throws SQLException {
             }
             else
             {
-            return user;
+                System.out.println("Is customer:");
+                return user;
             }
           
         }

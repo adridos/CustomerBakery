@@ -4,7 +4,10 @@
     Author     : matthew
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*" %>
+
+<% Class.forName("com.mysql.jdbc.Driver"); %>
+
 <!DOCTYPE HTML>
 <html>
 
@@ -34,6 +37,11 @@
             justify-content: space-around;
         }
 
+        tables{
+            border: 10px solid black;
+            width: 100%;
+        }
+
     </style>
 </head>
 
@@ -46,12 +54,46 @@
     <div class="Container">
         <div class="headers">
             <ul>
-                <li><h1>Last Name</h1></li>
-                <li><h1>First Name</h1></li>
-                <li><h1>Order Date </h1></li>
-                <li><h1>Item Quantity</h1></li>
+                <li><h1>Order ID:</h1></li>
+                <li><h1>Order Date:</h1></li>
+                <li><h1>Pickup Date: </h1></li>
+                <li><h1>Order Notes:</h1></li>
                 <li><a href="BakerDetails.jsp"><button class="infobtn">more info</button></a></li>
             </ul>
+            
+            <%
+           String dbDriver = "com.mysql.jdbc.Driver";
+        String dbURL = "jdbc:mysql:// localhost:3306/";
+        // Database name to access
+        String dbName = "bakerydb";
+        String dbUsername = "root";
+        String dbPassword = "MySQL2022!";
+  
+        Class.forName(dbDriver);
+        Connection con = DriverManager.getConnection(dbURL + dbName,
+                                                     dbUsername, 
+                                                     dbPassword);
+           Statement statement = con.createStatement() ;
+          ResultSet resultset = statement.executeQuery("SELECT * FROM ORDERS") ;
+       %>
+       
+        </div>
+       
+       <div>
+       
+    <table style="tables" class="center">
+  <tr>
+    <% while (resultset.next()) { %>
+    
+    <td><%= resultset.getInt(1) %></td>
+    <td><%= resultset.getString(2) %></td>
+    <td><%= resultset.getString(3) %></td>
+    <td><%= resultset.getString(4) %></td>
+    
+    <% } %>
+  </tr>
+</table>
+  
     </div>
 </body>
 

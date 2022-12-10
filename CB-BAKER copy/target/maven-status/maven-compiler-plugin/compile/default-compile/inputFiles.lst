@@ -1,5 +1,9 @@
 /Users/matthew/NetBeansProjects/CB-BAKER/src/main/java/com/mycompany/vs/User.java
 /Users/matthew/NetBeansProjects/CB-BAKER/src/main/java/com/mycompany/vs/UserLoginServlet.java
+/Users/matthew/NetBeansProjects/CB-BAKER/src/main/java/com/mycompany/vs/GlobalUser.java
+/Users/matthew/NetBeansProjects/CB-BAKER/src/main/java/com/mycompany/vs/ProcessOrder.java
 /Users/matthew/NetBeansProjects/CB-BAKER/src/main/java/com/mycompany/vs/UserDAO.java
 /Users/matthew/NetBeansProjects/CB-BAKER/src/main/java/com/mycompany/vs/DatabaseConnection.java
+/Users/matthew/NetBeansProjects/CB-BAKER/src/main/java/com/mycompany/vs/GlobalOrderCount.java
 /Users/matthew/NetBeansProjects/CB-BAKER/src/main/java/com/mycompany/vs/ReadOrder.java
+/Users/matthew/NetBeansProjects/CB-BAKER/src/main/java/com/mycompany/vs/Order.java

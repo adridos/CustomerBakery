@@ -17,6 +17,17 @@ public class User {
     private String Fname;
     private String Lname;
     
+    private int orderID;
+
+    
+    
+    public int getOrderID() {
+        return orderID;
+    }
+
+    public void setOrderID(int orderID) {
+        this.orderID = orderID;
+    }
 
     
     public void setId(int id) {
