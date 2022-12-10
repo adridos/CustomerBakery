@@ -4,7 +4,17 @@
     Author     : matthew
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="com.mycompany.vs.GlobalOrderCount"%>
+<%@page import="com.mycompany.vs.User"%>
+<%@page import="java.sql.Connection"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*" %>
+
+<% Class.forName("com.mysql.jdbc.Driver"); %>
+
 <!DOCTYPE HTML>
 <html>
 
@@ -82,6 +92,10 @@
 <body>
     <header-component></header-component>
     <div class="checkoutContainer">
+    
+    <form action="ProcessOrder" method="post">
+        
+        
         <div class="twodiv">
             <div class="checkoutdiv">
                 <h1>Checkout Info</h1>
@@ -115,11 +129,41 @@
 
             </div>
             <div class="orderdiv">
+                
+                <%
+           String dbDriver = "com.mysql.jdbc.Driver";
+        String dbURL = "jdbc:mysql:// localhost:3306/";
+        // Database name to access
+        String dbName = "bakerydb";
+        String dbUsername = "root";
+        String dbPassword = "MySQL2022!";
+  
+        Class.forName(dbDriver);
+        Connection con = DriverManager.getConnection(dbURL + dbName,
+                                                     dbUsername, 
+                                                     dbPassword);
+           Statement statement = con.createStatement() ;
+          PreparedStatement ps = con.prepareStatement("SELECT * FROM ITEMS_ORDERED WHERE ORDERS_ORDER_ID = ?") ;
+          
+          int counter = GlobalOrderCount.OrderCounter;
+          
+          ps.setInt(1, counter);
+          
+          ResultSet rs = ps.executeQuery();
+
+       %>
+                
+                
                 <h1>Order Details</h1>
-                <p>Placeholder for Item name x Item Quantity x Item Price</p>
-                <p>Placeholder for Item name x Item Quantity x Item Price</p>
-                <p>Placeholder for Item name x Item Quantity x Item Price</p>
-                <p>Placeholder for Total:</p>
+                <%
+        while (rs.next()) {
+           // String itemName = resultset.getString("item_name");
+            int itemQuantity = rs.getInt("ITEM_QUANTITY");
+            double itemPrice = rs.getDouble("PRICE_TOTAL");
+            out.println("<p>" + "Total Items: " + itemQuantity + "</p>" + "<p>" + "Total Price: $" + itemPrice + "</p>");
+        }
+    %>
+                
             </div>
         </div>
         <a href="Confirmation.jsp"><button class="submitbtn">Submit</button></a>

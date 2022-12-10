@@ -3,7 +3,13 @@
     Created on : Dec 3, 2022, 9:45:50 PM
     Author     : matthew
 --%>
-
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="com.mycompany.vs.GlobalOrderCount"%>
+<%@page import="com.mycompany.vs.User"%>
+<%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <html>
@@ -67,7 +73,11 @@
         <br>
         <p>Order Recieved</p>
         <a href="Customer.jsp"><button class="submitbtn">return home</button></a>
-
+<%
+        GlobalOrderCount.OrderCounter = GlobalOrderCount.OrderCounter + 1;
+        
+        %>
+        
     </div>
 </body>
 

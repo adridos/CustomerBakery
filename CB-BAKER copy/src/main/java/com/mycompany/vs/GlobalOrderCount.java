@@ -10,6 +10,8 @@ package com.mycompany.vs;
  */
 public class GlobalOrderCount {
     
+    //if more time implement way to pull from database last value
+    
     public static int OrderCounter;
    
 }
