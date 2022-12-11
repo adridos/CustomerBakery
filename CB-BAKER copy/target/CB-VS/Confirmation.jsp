@@ -63,7 +63,7 @@
     <header-component></header-component>
     <div class="Container">
         <h1>Confirmation</h1>
-        <h1>Order Successfull!</h1>
+        <h1>Order Successful!</h1>
         <br>
         <br>
         <br>
@@ -71,7 +71,7 @@
         <br>
         <p>Please check back here for progress updates on your order</p>
         <br>
-        <p>Order Recieved</p>
+        <p>Order Received</p>
         <a href="Customer.jsp"><button class="submitbtn">return home</button></a>
 <%
         GlobalOrderCount.OrderCounter = GlobalOrderCount.OrderCounter + 1;

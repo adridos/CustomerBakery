@@ -110,10 +110,10 @@
                 <input type="text" id="lname" name="lname">
                 <br>
                 <label>Phone Number</label>
-                <input type="tel" id="fname" name="fname">
+                <input type="tel" id="phone" name="phone">
                 <br>
                 <label>Email</label>
-                <input type="email" id="fname" name="fname">
+                <input type="email" id="email" name="email">
                 <br>
                 <div class="paymentOptions">
                     <label>Credit Card</label>

@@ -106,6 +106,23 @@ HttpServletResponse response)
         
         st.executeUpdate();
         
+        
+        //create a new user for order based on read in:
+        PreparedStatement st5 = con.prepareStatement(
+        "UPDATE CUSTOMER SET CUST_FNAME = ?, CUST_LNAME = ?, CUST_EMAIL = ? WHERE CUSTOMER_ID = ?"
+        );
+        
+        String fname = request.getParameter("fname");
+        String lname = request.getParameter("lname");
+        String email = request.getParameter("email");
+        
+        st5.setString(1, fname);
+        st5.setString(2, lname);
+        st5.setString(3, email);
+        st5.setInt(4, orderCount);
+        
+        st5.executeUpdate();
+        
         PreparedStatement st2 = con.prepareStatement(
                     "UPDATE CUSTOMER SET "
                             + "ORDERS_ORDER_ID = ?"
@@ -129,6 +146,7 @@ HttpServletResponse response)
         st.close();
         st2.close();
         ps3.close();
+        st5.close();
         con.close();
             
             String destPage = "Confirmation.jsp";
