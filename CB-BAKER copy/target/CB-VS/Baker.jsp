@@ -17,31 +17,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="header.js" type="text/javascript" defer></script>
+    <script src="components/header.js" type="text/javascript" defer></script>
     <style>
         body {
             background-image: url("images/bakeryBG.jpg");
         }
-        li{
+
+        li {
             padding: 50px;
         }
-        .infobtn{
-            padding:0;
+
+        .infobtn {
+            padding: 0;
         }
-        h1{
-            padding:0;
+
+        h1 {
+            padding: 0;
         }
-        .headers{
+
+        .headers {
             display: flex;
             width: 100%;
             justify-content: space-around;
         }
 
-        tables{
-            border: 10px solid black;
+        table {
+            border-collapse: collapse;
             width: 100%;
         }
 
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 20px;
+        }
+        th{
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e9e9e9;
+        }
     </style>
 </head>
 
@@ -53,13 +70,6 @@
     </header>
     <div class="Container">
         <div class="headers">
-            <ul>
-                <li><h1>Order ID:</h1></li>
-                <li><h1>Order Date:</h1></li>
-                <li><h1>Pickup Date: </h1></li>
-                <li><h1>Order Notes:</h1></li>
-                <li><a href="BakerDetails.jsp"><button class="infobtn">more info</button></a></li>
-            </ul>
             
             <%
            String dbDriver = "com.mysql.jdbc.Driver";
@@ -74,27 +84,42 @@
                                                      dbUsername, 
                                                      dbPassword);
            Statement statement = con.createStatement() ;
-          ResultSet resultset = statement.executeQuery("SELECT * FROM ORDERS") ;
+        //  ResultSet resultset = statement.executeQuery("SELECT * FROM ORDERS") ;
+          
+          ResultSet rs = statement.executeQuery("SELECT C.CUST_FNAME, C.CUST_LNAME, I.ITEM_QUANTITY, O.ORDER_DATE FROM CUSTOMER C INNER JOIN ORDERS O ON C.ORDERS_ORDER_ID=O.ORDER_ID INNER JOIN ITEMS_ORDERED I ON O.ORDER_ID=I.ORDERS_ORDER_ID");
+
        %>
-       
-        </div>
-       
-       <div>
-       
-    <table style="tables" class="center">
-  <tr>
-    <% while (resultset.next()) { %>
+            
+            
+            <table>
+                
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Item Quantity</th>
+                    <th>Order Date </th>
+                </tr>
+                
+                <tr>
+                <% while (rs.next()) { %>
     
-    <td><%= resultset.getInt(1) %></td>
-    <td><%= resultset.getString(2) %></td>
-    <td><%= resultset.getString(3) %></td>
-    <td><%= resultset.getString(4) %></td>
-    
-    <% } %>
-  </tr>
-</table>
-  
-    </div>
+                <td><%= rs.getString("CUST_FNAME") %></td>
+                <td><%= rs.getString("CUST_LNAME") %></td>
+                <td><%= rs.getString("ITEM_QUANTITY") %></td>
+                <td><%= rs.getString("ORDER_DATE") %></td>
+                </tr>
+                    
+                <% } %>
+                
+                
+            </table>
+            </div>
+
+                
+     <form action="BakerMasterReset.jsp" method="GET">
+    <input type="submit" value="Reset Values">
+    </form>
+                
 </body>
 
 </html>
