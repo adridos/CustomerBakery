@@ -115,6 +115,11 @@
             </table>
             </div>
 
+                
+     <form action="BakerMasterReset.jsp" method="GET">
+    <input type="submit" value="Reset Values">
+    </form>
+                
 </body>
 
 </html>

@@ -50,6 +50,9 @@
            
            User user = new User();
            
+           // Update the OrderCounter variable with the latest value from the database
+            GlobalOrderCount.OrderCounter = GlobalOrderCount.refreshOrder();
+           
            user.setOrderID(GlobalOrderCount.OrderCounter);
            
            GlobalOrderCount.OrderCounter = GlobalOrderCount.OrderCounter + 1;

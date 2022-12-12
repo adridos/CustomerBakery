@@ -145,6 +145,8 @@
            Statement statement = con.createStatement() ;
           PreparedStatement ps = con.prepareStatement("SELECT * FROM ITEMS_ORDERED WHERE ORDERS_ORDER_ID = ?") ;
           
+          GlobalOrderCount.OrderCounter = GlobalOrderCount.refreshOrder();
+          
           int counter = GlobalOrderCount.OrderCounter;
           
           ps.setInt(1, counter);
