@@ -33,8 +33,13 @@ A customer can view details of the items by clicking on the photo of the desired
 ## 2.3 Checkout 
 On the checkout page, the customer will see a summary of their order on the right and on the left is a list of customer required input. In order to proceed with the order, the customer must enter the desired pick up date, first name, last name, phone number, email and select a radio button for their pyment method: credit card, debit card or cash. Once everything in entered, the customer can continue by clicking the submit button.
 
+<img width="1232" alt="checkout" src="https://user-images.githubusercontent.com/66699146/207179505-f415fcd4-6943-4a30-8cf5-98c17eeaacca.png">
+
 ## 2.4 Confirmation
 When the order has been submitted, the customer is taken to a confirmation page where the customer will see their order was submitted successfully. The customer will also see a progress update for the order that will read Order Received by default. The customer cancheck that progress updateto see when the order is in progress and when the order has been completed.
+
+<img width="1419" alt="confirmation" src="https://user-images.githubusercontent.com/66699146/207178085-97faa589-ee61-44b7-8928-b80688f83339.png">
+
 
 The customer can stay on this page or can click on the Return to Home buttonto go back to the home page listed in 2.1.
 
@@ -42,7 +47,12 @@ The customer can stay on this page or can click on the Return to Home buttonto g
 # 3. Baker Walkthrough
 
 ## 3.1 Baker Portal
-In the Baker portal of The Bakery, a baker can view any order that have been submitted by customers. Each order will have the name of the customer, the order date, the pick up date, the item quantity and other details important to the baker.
+In the Baker portal of The Bakery, a baker can view any order that have been submitted by customers. Each order will have the name of the customer, the order date,the item quantity and a drop down menu for bakers to update the status of the order.
+
+<img width="1326" alt="bakerview" src="https://user-images.githubusercontent.com/66699146/207178924-03db6109-24e5-4bca-a000-7474bf97e186.png">
+
+There is also a reset button for bakers to reset the orders so that once all orders are completed, the view removes them and the page starts fresh again.
+<img width="1439" alt="reset" src="https://user-images.githubusercontent.com/66699146/207179337-709be7a0-44ff-46a7-99bb-e1a38e12a185.png">
 
     
 </ol>
